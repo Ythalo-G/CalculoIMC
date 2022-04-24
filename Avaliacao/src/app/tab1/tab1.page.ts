@@ -10,6 +10,8 @@ export class Tab1Page {
   @Input() altura: number;
   @Input() peso: number;
 
+
+
   valorImc: any;
   descricao: any;
 
@@ -17,13 +19,17 @@ export class Tab1Page {
   ngOnInit(): void {
   }
 
+  verificar(){
+      if(!this.altura || !this.peso){
+      alert("DADOS INVALIDOS !!!");
+      }else{
+        this.calcular();
+      }
+  }
+
   calcular(){
     var calAltura = this.altura * this.altura;
     this.valorImc = (this.peso /calAltura).toFixed(2);
-    this.verDescricao();
-  }
-
-  verDescricao(){
     if(this.valorImc < 18.05 ){
       return this.descricao = "ABAIXO DO NORMAL"
     }else if(this.valorImc >= 18.05  && this.valorImc <= 24.90 ){

@@ -10,7 +10,7 @@
   <ion-col >
     <ion-item>
       <ion-label position="stacked"  ><h1>Digite sua Altura</h1></ion-label>
-      <ion-input type="text" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" [(ngModel)]="altura"></ion-input>
+      <ion-input type="text" (keyup)="altura = $event.target.value" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" [(ngModel)]="altura"></ion-input>
     </ion-item>
   </ion-col>
   </ion-row>
@@ -18,12 +18,12 @@
   <ion-col >
     <ion-item>
       <ion-label position="stacked" ><h1>Digite seu Peso</h1></ion-label>
-      <ion-input type="text"  [(ngModel)]="peso"></ion-input>
+      <ion-input type="text" (keyup)="peso = $event.target.value" [(ngModel)]="peso"></ion-input>
     </ion-item>
   </ion-col>
   </ion-row>
   <ion-row>
-    <ion-button shape="round" color="secondary" (click)="calcular()" >CALCULAR <ion-icon name="calculator-outline" ></ion-icon></ion-button>
+    <ion-button shape="round" color="secondary" (click)="verificar()" >CALCULAR <ion-icon name="calculator-outline" ></ion-icon></ion-button>
     </ion-row>
 </ion-grid>
 <div class="resultado">
