@@ -1,0 +1,23 @@
+.teste{
+    align-items: center;
+}
+.resultado{
+    padding-top: 45px;
+    top: 50%;
+    position:absolute;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 4%;
+    border-style:solid;
+    border-color:aqua;
+    background-color: aquamarine;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.paragrafo{
+    height: 45px;
+    background-color: rgb(148, 148, 221);
+}

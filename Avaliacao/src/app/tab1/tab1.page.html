@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calcular IMC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-grid class="bloco">
+  <ion-row>
+  <ion-col >
+    <ion-item>
+      <ion-label position="stacked"  ><h1>Digite sua Altura</h1></ion-label>
+      <ion-input type="text" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any" [(ngModel)]="altura"></ion-input>
+    </ion-item>
+  </ion-col>
+  </ion-row>
+  <ion-row>
+  <ion-col >
+    <ion-item>
+      <ion-label position="stacked" ><h1>Digite seu Peso</h1></ion-label>
+      <ion-input type="text"  [(ngModel)]="peso"></ion-input>
+    </ion-item>
+  </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-button shape="round" color="secondary" (click)="calcular()" >CALCULAR <ion-icon name="calculator-outline" ></ion-icon></ion-button>
+    </ion-row>
+</ion-grid>
+<div class="resultado">
+  <ion-text  color="dark" >
+  <h1>Seu IMC: </h1>
+  <h3><p class="paragrafo">{{valorImc}}</p></h3>
+  <h1> A sua condição é:</h1>
+  <h3><p class="paragrafo">{{descricao}}</p></h3>
+</ion-text>
+</div>
+
